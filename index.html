@@ -1,333 +1,263 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> site 1 </title>
-  <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-  <!-- Estilos -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
-  <!-- Progress Bar -->
-  <script src="js/progressbar.min.js"></script>
-  <!-- Parallax -->
-  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+<link rel="stylesheet" type="text/css" href="nomedoarquivo.css"/> 
+<meta charset="UTF-8"/>
+  <title> Revista Êxodos </title>
+
+  <style Type="text/css">
+  body {
+  padding: 0;
+   margin: 0;
+  }
+    .menu ul li { 
+	background-color: #6da3f9;
+	Color white;
+	float: left;
+	width: 200px;
+	height: 20px
+	display: inline-block;
+	text-align: center;
+	line-height: 40px
+	font-size: 25px;
+	position: relative;
+	}
+	.menu ul li:hover{
+	background-color: #2c69cc;
+	padding: 0;
+	margin: 0;
+	}
+	.menu ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	}
+	.menu ul ul{
+	      display: none;
+		  list-style: none;
+	}
+	.menu ul li:hover > ul {
+	       Display: block;
+	
+	}
+	.menu ul ul ul {
+	     margin-left: 202px;
+		 top: 0px;
+		 position: absolute;
+	
+	}
+	.menu ul ul ul:hover {
+	 background-color: #144aa0 
+	}
+	.menu a{
+	    Color: white;
+		text-decoration: none;
+	}
+	
+	body{margin-top: 100px; 
+     margin-right: 100px;
+	 margin-bottom: 100px;
+	 margin-left: 100px;
+	 /* Código da cores */
+	 background-color:  #00BFFF; 
+     background: url(pudim.jpeg) no-repeat center center fixed; 
+	 -o-background-size: cover;
+	 -webkit-background-size; cover;
+	 background-size:cover;
+	}
+
+       h1{
+	    font-family: Arial;                                                                                                                                                                                                                                              
+		font-size: 15pt;
+		color: blue;
+		text-shadow: 2px 2px 2px black;
+	   }
+	   p{
+		   
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+		font-size: 15px;
+		color: #000000;  
+	   }
+	   </style>
 </head>
-<body>
-  <header>
-    <div class="container" id="nav-container">
-      <!-- add essa class -->
-      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <a class="navbar-brand" href="index.html">
-          <img id="logo" src="img/hdcagency_logo.svg" alt="hDC Agency"> Curso gerenciamento de projetos.
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" id="home-menu" href="#">Home</span></a>
-            <a class="nav-item nav-link" id="about-menu" href="https://replit.com/languages/python3" target="_blank" >Python</a>
-            <a class="nav-item nav-link" id="about-menu" href="https://github.com/professorjar" target="_blank" >github</a>
-            <a class="nav-item nav-link" id="about-menu" href="https://professorjar.github.io/gerenciamentodeprojetos/doacao.html#" target="_blank" >Doação</a>
-            <a class="nav-item nav-link" id="services-menu" href="#">Serviços</a> 
-            <a class="nav-item nav-link" id="team-menu" href="#">Time</a>
-            <a class="nav-item nav-link" id="portfolio-menu" href="#">Projetos</a>
-            <a class="nav-item nav-link" id="contact-menu" href="https://www.youtube.com/watch?v=NtswvBQ2Tmg" target="_blank" >Cadastro nos cursos</a>
-            <a class="nav-item nav-link" id="contact-menu" href="https://www.youtube.com/watch?v=8whWoS03go0&list=PLi05KOUhtQoAC-IpN1G-hWXl43_-hU12H" target="_blank" >Playlists Gestão</a>
-            <a class="nav-item nav-link" id="contact-menu" href="https://www.youtube.com/playlist?list=PLi05KOUhtQoAi5dTchzH7o2_qNEzd3icc" target="_blank" >Playlists Python</a>
-            <a class="nav-item nav-link" id="contact-menu" href="#">Contato</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="container-fluid">
-      <!-- slider -->
-      <div id="mainSlider" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
-          <li data-target="#mainSlider" data-slide-to="1"></li>
-          <li data-target="#mainSlider" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/banner1.png" class="d-block w-100" alt="Projetos de e-commerce">
+ <body>
+ <h1> <marquee> O Brasil que eu faço!         www.circulartaboao.com </marquee> </h1>
+ <br>
+ <img src="favicon.ico" alt="Favicon">
+ <br>
+  <img src="https://www.circulartaboao.com/images/imagem_mundo/Foto_Alberto_2020.jpeg" alt="Favicon" width="100" height="100">
+ 
 
-            <!-- tirar classe d-none -->
+ <nav class="menu">
+ <ul>
+ <li> CPF 
+		<ul>
+								<li>
+								</li>
+								<li>
+									Cadastro
+								</li>
+								<li>
+									Auditoria
+								</li>
+											<li>
+											Confira
+											</li>
+								<li> 
+								Cesta Básica 
+		                        </li>
+								<li>
+									Transparência
+								</li>
+					   </ul>
+ </li>
+ <li> CNPJ 
+ 			
+ <ul>
+								<li>
+									Canvas
+								</li>
+								<li>
+									Parceria
+								</li>
+								<li>
+									Auditoria
+								</li>
+											<li>
+											Confira
+											</li>
+								<li> 
+								Site
+		                        </li>
+								<li>
+									Transparência
+								</li>
+					   </ul>
+ 
+ </li>
+        <li> Cesta Básica 
+						<ul>
+								<li>
+									Entrega
+								</li>
+								<li>
+									Cadastro
+								</li>
+								<li>
+									Auditoria
+								</li>
+											<li>
+											Confira
+											</li>
+								<li> 
+								Cesta Básica 
+		                        </li>
+								<li>
+									Transparência
+								</li>
+								
+								<li>
+						
+								  <li> <a href="https://www.facebook.com/groups/circulartaboao"> Curso </li> </a>
+								
+								</li>
+								
+								<li>
+									Motoboy
+								</li>
+								
+					   </ul>
+		                        </li>
+								<li> 
+								Êxodos 		
+						<ul>
+		                       <li>
+		                       Canal YouTube
+		                       </li>
+							   <li>
+		                       <li> <a href="https://www.circulartaboao.com/"> Circular Taboão </li> </a>
+		                       </li>
+							   <li>
+		                       Grupo Facebook
+		                       </li>
+							   <li>
+							   
+							   <li> <a href="https://chat.whatsapp.com/FKvljCxN3vl50Hfb5vRcDx"> Grupo WhatsApp </li> </a>
+		                       
+		                       </li>
+							   <li> <a href="https://www.youtube.com/c/JoseAlberto?sub_confirmation=1"> Canal JAR </li> </a>
+		                       
+		                    
+							   <li>
+		                       Banco de Mídia
+		                       </li>
+							   
+							   
+		                </ul>
+		<li> <a href="https://www.youtube.com/c/JoseAlberto?sub_confirmation=1"> Canal</li> </a>
+				
+ </ul>
+ 
+ </nav>
+  <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <br>
+ <br>
+ <br>
+  <br>
+ 
+  <h1> Êxodos versão 1.003 13/06/2020                    Doces Roberto  55 11 991690049 </h1>
+	  <h2> Vamos criar nosso servidor de trabalho!</h1>
+	 
+	  <P> Nosso objetivo é ajudar ao próximo, nossa <b>regra de ouro</b> é não olhar quem está sendo ajudado.</p>
+      <P>E quem está sendo ajudado tem a <b>regra de ouro</b> de no futuro ajudar alguém que também precise de auxílio.<p/>
+	  <P><i>José Alberto Rodrigues</i>
+	  <br/>
+	  <p/>
+	  
+ <table border="1" style="border-spacing: 0">
+		<thead>
+				<tr>
+					<th> Curso</th>
+					<th> Html </th>
+					<th> CSS</th>
+					<th> JavaScript</th>
+				</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td> HTML 5   </td>
+						<td>   5   </td>
+						<td>  St   </td>
+						<td>  Informação  </td>
+						</tr>
+					</tbody>
+						<tfoot>
+							<tr>
+					<td> rodapé </td>
+					<td>rodapé </td>
+					<td>rodapé </td>
+					<td>rodapé </td>
+							</tr>
+					</tfoot>
+</table>
+	<BR>  	  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O9_PAjbJVP0" 
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<p>Bem-Vindo ao Projeto <span style="color: #ff0000;">Dos</span> <span style="color: #000080;">Versão 1.003</span></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xsQVytAiyRU" frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Rede de solidariedade </p>
+<p>
+Muito obrigada.
+p> Contato <span style="color: #ff0000;">  </span> <span style="color: #060606;"> Contato </span></p>
 
-            <div class="carousel-caption d-md-block">
-              <h2>Quer criar um e-commerce?</h5>
-              <p>Conte conosco! Faça parte da bolsa de valores sociais.</p>
-              <a href="#" class="main-btn">Ver portfólio</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/banner2.png" class="d-block w-100" alt="Engenharia de software">
-            <div class="carousel-caption d-md-block">
-              <h2>Está querendo tirar o projeto do papel?</h5>
-              <p> Tomada= corrente alternada, fonte= corrente continua</p>
-<p> alto e baixo desempenho dos computadores</p>
-<p> Gforce - Placa off board para melhor desempenho</p>
-<p> Placa on board ja há as outras placas.</p>
-<p> Terceiro pino da tomada é chamado de fio terra.</p>
-<p> Memorias melhoram o desempenho.</p>
-<p> Pesquisa sobre Quartzo -Cristal-</p>
-               <p> Pratica de montagem e desmontagem - programação- dos computadores na sala 5. </p>
-              <a href="#" class="main-btn">Entre em contato</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/banner3.png" class="d-block w-100" alt="Manutenção em software">
-            <div class="carousel-caption d-md-block">
-              <h2>Está buscando manutenção no seu software?</h5>
-              <p>A nossa equipe de projetos sociais conta com engenheiros altamente qualificados para resolver seu problema.</p>
-              <a href="#" class="main-btn">Entre em contato</a>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <!-- Sobre a empresa -->
-      <div id="about-area">
-        <div class="container">
-            <div class="row">
-              <div class="col-12"> 
-                <h3 class="main-title">Bolsa de valores sociais</h3>
-              </div>
-              <div class="col-md-6">
-                <img class="img-fluid" src="img/agencia.jpg" alt="Bolsa de valores sociais">
-              </div>
-              <div class="col-md-6">
-                <h3 class="about-title">Uma agência que pensa no futuro</h3>
-                <p>Nossos projetos são adaptados ao cliente e seu propósito.</p>
-                <p>Após a especificação do projetos os arquitetos de software definirão as melhores tecnologias para seu projeto.</p>
-                <p>E nossos designers trabalharão na sua interface/layout para impulsionar o negócio.</p>
-                <p>Veja outros diferenciais:</p>
-                <ul id="about-list">
-                  <li><i class="fas fa-check"></i> Utilização de Machine Learning / AI</li>
-                  <li><i class="fas fa-check"></i> Layout responsivo para todos os dispositivos</li>
-                  <li><i class="fas fa-check"></i> Integração com diversos sistemas do mercado</li>
-                  <li><i class="fas fa-check"></i> Sistema de pagamento próprio</li>
-                  <li><i class="fas fa-check"></i> Desenvolvimento com metodologia ágil</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-      </div>
-      <!-- Serviços da empresa -->
-      <div id="services-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-                <h3 class="main-title">Nossas especialidades</h3>
-            </div>
-            <div class="col-md-4 service-box">
-              <i class="fas fa-mobile-alt"></i>
-              <h4>Aplicativos Nativos</h4>
-              <p>Utilizamos o real poder dos dispositivos móveis construindo aplicativos nativos.</p>
-            </div>
-            <div class="col-md-4 service-box">
-              <i class="fas fa-shopping-cart"></i>
-              <h4>E-commerces</h4>
-              <p>Temos uma plataforma própria de e-commerce que se adapta a qualquer regra de negócio (B2C e B2B).</p>
-            </div>
-            <div class="col-md-4 service-box">
-              <i class="fas fa-paint-brush"></i>
-              <h4>Design Criativo</h4>
-              <p>Nossos designers são especializados em UI/UX e também possuem vasta experiência no mercado de software.</p>
-            </div>
-            <div class="col-md-4 service-box">
-              <i class="fab fa-google"></i>
-              <h4>Experts em SEO</h4>
-              <p>Com nosso serviço de marketing seu site será melhor posicionado no Google e venderá mais.</p>
-            </div>
-            <div class="col-md-4 service-box">
-              <i class="fas fa-hands-helping"></i>
-              <h4>Suporte 24/7</h4>
-              <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (chat, email, skype)</p>
-            </div>
-            <div class="col-md-4 service-box">
-              <i class="fas fa-server"></i>
-              <h4>Experiência em servidores</h4>
-              <p>Garantimos uptime e também rápido tempo de resposta do seu site para o seu cliente.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Dados da empresa -->
-      <div id="data-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-xs-6 circle-box">
-              <div id="circleA"></div>
-              <p>Projetos entregues</p>
-            </div>
-            <div class="col-md-3 col-xs-6 circle-box">
-              <div id="circleB"></div>
-              <p>Clientes Felizes</p>
-            </div>
-            <div class="col-md-3 col-xs-6 circle-box">
-              <div id="circleC"></div>
-              <p>Colaboradores</p>
-            </div>  
-            <div class="col-md-3 col-xs-6 circle-box">
-              <div id="circleD"></div>
-              <p>Cafézinhos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Time -->
-      <div id="team-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h3 class="main-title">Nosso time</h3>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <img src="img/profile1.jpg" class="card-img-top" alt="Imagem de Perfil 1">
-                <div class="card-body">
-                  <h5 class="card-title">Jhon Doe</h5>
-                  <p class="card-text">Software Developer</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <img src="img/profile2.jpg" class="card-img-top" alt="Imagem de Perfil 2">
-                <div class="card-body">
-                  <h5 class="card-title">Maria Mariana</h5>
-                  <p class="card-text">SEO Consultant</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <img src="img/profile3.jpg" class="card-img-top" alt="Imagem de Perfil 3">
-                <div class="card-body">
-                  <h5 class="card-title">Paul Baker</h5>
-                  <p class="card-text">Project Manager</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
-                <div class="card-body">
-                  <h5 class="card-title">Karina Katarina</h5>
-                  <p class="card-text">UX/UI Designer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Trabalhe conosco -->
-      <div id="apply-area">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 apply-box" id="company-img"></div>
-            <div class="col-md-6 apply-box" id="pattern-img">
-              <h4>Gosta de desafios?</h4>
-              <p>Temos várias posições abertas, entre elas: Software Engineer, UI/UX Designer, Project Manager e mais.</p>
-              <p>Clique no botão abaixo e confira os benefícios e as posições em aberto.</p>
-              <p>Aqui você terá a chance de trabalhar com as melhores tecnologias e os profissionais mais capacitados.</p>
-              <a href="#" class="main-btn" id="apply-btn">Saiba Mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Portfólio -->
-      <div id="portfolio-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="main-title">Conheça nossos projetos</h3>
-            </div>
-            <div class="col-md-12" id="filter-btn-box">
-              <button class="main-btn filter-btn active" id="all-btn">Todos</button>
-              <button class="main-btn filter-btn" id="dev-btn">Desenvolvimento</button>
-              <button class="main-btn filter-btn" id="dsg-btn">Design</button>
-              <button class="main-btn filter-btn" id="seo-btn">SEO</button>
-            </div>
-            <div class="col-md-4 project-box dev">
-              <img src="img/proj1.jpg" class="img-fluid" alt="Projeto 1">
-            </div>
-            <div class="col-md-4 project-box dsg">
-              <img src="img/proj2.jpg" class="img-fluid" alt="Projeto 2">
-            </div>
-            <div class="col-md-4 project-box seo">
-              <img src="img/proj3.jpg" class="img-fluid" alt="Projeto 3">
-            </div>
-            <div class="col-md-4 project-box dev">
-              <img src="img/proj4.jpg" class="img-fluid" alt="Projeto 4">
-            </div>
-            <div class="col-md-4 project-box dsg">
-              <img src="img/proj5.jpg" class="img-fluid" alt="Projeto 5">
-            </div>
-            <div class="col-md-4 project-box seo">
-              <img src="img/proj6.jpg" class="img-fluid" alt="Projeto 6">
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Newsletter -->
-      <div id="news-area">
-        <div class="container">
-          <div class="col-md-12">
-            <h3 class="main-title">Fique por dentro das novidades</h3>
-          </div>
-          <p>Assine nossa lista de e-mails, e receba nossos conteúdos sobre desenvolvimento de software</p>
-          <form action="">
-            <input type="text" class="form-control" id="email-input" name="email" placeholder="Seu melhor e-mail">
-            <input type="submit" id="news-btn" value="Inscrever">
-          </form>
-        </div>
-      </div>
-      <!-- Call to Action -->
-      <div id="call-area">
-        <div class="container">
-            <div class="row">
-              <p>Deseja fazer um orçamento sem compromisso?</p>
-              <button class="main-btn" id="call-btn">Orçar</button>
-            </div>
-          </div>
-      </div>
-    </div>
-  </main>
-  <!-- Rodapé -->
-  <footer>
-    <div id="contact-area">
-      <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="main-title">Entre em contato conosco</h3>
-            </div>
-            <div class="col-md-4 contact-box">
-              <i class="fas fa-phone"></i>
-              <p><span class="contact-tile">Ligue para:</span> (11) 9 5389-5977</p>
-              <a class="nav-item nav-link" id="about-menu" href="https://chat.whatsapp.com/CW1r0YYJt1q3Om5TUzcett" target="_blank" >WhatsApp clique aqui!</a>
-              <p><span class="contact-tile">Horários:</span> 8:00 - 19:00</p>
+</P>
 
 </body>
 </html>
